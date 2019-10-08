@@ -23,7 +23,7 @@
 
     <context:component-scan base-package="com.cn"/>
 
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven conversion-service="converterService"/>
 
     <!--映射器和适配器-->
 
@@ -35,4 +35,11 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean id="converterService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+           <array>
+               <bean class="com.cn.castutils.String2DateConverter"></bean>
+           </array>
+        </property>
+    </bean>
 </beans>

@@ -20,7 +20,6 @@ public class DemoController {
     private ItemsServiceImpl itemsService;
     @RequestMapping("/demo")
     public void demo(Account account) throws Exception {
-
         System.out.println(account);
     }
 
