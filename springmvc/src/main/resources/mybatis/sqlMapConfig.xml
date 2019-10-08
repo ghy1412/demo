@@ -2,4 +2,9 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
-<configuration/>
+<configuration>
+    <settings>
+        <!--哇哇哇 开启二级缓存-->
+        <setting name="cacheEnable" value="true"/>
+    </settings>
+</configuration>
