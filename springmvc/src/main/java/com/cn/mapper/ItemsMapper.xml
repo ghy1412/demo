@@ -30,7 +30,7 @@
     <select id="queryItems"  resultType="com.cn.po.Items">
         select * from items
     </select>
-    <resultMap id="map" type="com.cn.po">
+    <resultMap id="map" type="com.cn.po.Items">
     </resultMap>
 
     <select id="query" parameterType="com.cn.po.User" resultMap="map">

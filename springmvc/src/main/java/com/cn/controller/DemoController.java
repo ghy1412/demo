@@ -1,5 +1,6 @@
 package com.cn.controller;
 
+import com.cn.po.Account;
 import com.cn.po.Items;
 import com.cn.po.User;
 import com.cn.service.ItemsService;
@@ -15,9 +16,13 @@ import java.util.List;
 
 @Controller
 public class DemoController {
-
     @Autowired
     private ItemsServiceImpl itemsService;
+    @RequestMapping("/demo")
+    public void demo(Account account) throws Exception {
+
+        System.out.println(account);
+    }
 
     @RequestMapping("/queryI")
     public ModelAndView query(String name) throws Exception {

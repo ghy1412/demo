@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
+        >
 
 <!--
     namespace is must be established
@@ -29,7 +30,12 @@
     <select id="queryItems"  resultType="com.cn.po.Items">
         select * from items
     </select>
+    <resultMap id="map" type="com.cn.po.Items">
+    </resultMap>
 
+    <select id="query" parameterType="com.cn.po.User" resultMap="map">
+
+    </select>
 
     <resultMap id="myResultMap" type="com.cn.po.User">
         <id column="myNumber" property="userId"/>

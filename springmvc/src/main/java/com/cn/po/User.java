@@ -2,9 +2,10 @@ package com.cn.po;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
 
     private int userId;
 
@@ -58,5 +59,16 @@ public class User {
 
     public void setUserAddr(String userAddr) {
         this.userAddr = userAddr;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", birthday=" + birthday +
+                ", userSex='" + userSex + '\'' +
+                ", userAddr='" + userAddr + '\'' +
+                '}';
     }
 }
