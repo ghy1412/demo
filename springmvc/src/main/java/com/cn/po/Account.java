@@ -8,6 +8,7 @@ import java.util.Map;
 
 public class Account implements Serializable {
 
+
     public String name;
     public String password;
     //public User user;
@@ -39,6 +40,7 @@ public class Account implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     @Override
     public String toString() {
