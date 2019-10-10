@@ -37,9 +37,14 @@
     <input type="submit"  id="btn" value="提交">
 </form>--%>
 
-<form action="uploadfile2" method="post" enctype="multipart/form-data">
+<%--<form action="uploadfile2" method="post" enctype="multipart/form-data">
     文件上传:<input type="file" name="upload"/>
     <input type="submit"/>
+</form>--%>
+
+<form action="testMode" method="post" enctype="multipart/form-data">
+    <input type="text" name="name">
+    <input type="submit" id="btn"/>
 </form>
 </body>
 </html>

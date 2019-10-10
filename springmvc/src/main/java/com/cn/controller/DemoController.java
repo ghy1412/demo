@@ -14,10 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -30,9 +27,21 @@ import java.util.UUID;
 public class DemoController {
     @Autowired
     private ItemsServiceImpl itemsService;
-    @RequestMapping("/demo")
-    public void demo(Account account) throws Exception {
+    @ModelAttribute
+    public Account retAccount(String name){
+        System.out.println(name);
+        Account account = new Account();
+        account.setName("zhangsan");
+        account.setPassword("123");
+        System.out.println("第一步");
+        return account;
+    }
+
+    @RequestMapping("/testMode")
+    public String demo(Account account) throws Exception {
+        System.out.println("第二步");
         System.out.println(account);
+        return "success";
     }
 
     @RequestMapping("/queryI")
@@ -79,7 +88,7 @@ public class DemoController {
     }
 
     @RequestMapping("/uploadfile2")
-    public String uploadfile2(HttpServletRequest request, MultipartFile upload) throws Exception {
+    public String uploadfile2(MultipartFile upload) throws Exception {
         //C:\Users\someonexmh\Desktop
         //String realPath = request.getSession().getServletContext().getRealPath("/uploads/");
         String realPath = "C:\\Users\\someonexmh\\Desktop\\uploads";
