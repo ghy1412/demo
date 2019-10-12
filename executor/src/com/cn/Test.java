@@ -1,10 +1,18 @@
 package com.cn;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class Test {
     public static void main(String[] args) {
-
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("hello", 1);
+        Set<Map.Entry<String, Integer>> entries = map.entrySet();
+        Integer hello = map.get("hello");
+        boolean hello1 = map.containsKey("hello");
+        boolean hello2 = map.containsValue("hello");
     }
 
 }
