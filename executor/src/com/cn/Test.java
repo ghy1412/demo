@@ -13,6 +13,10 @@ public class Test {
         Integer hello = map.get("hello");
         boolean hello1 = map.containsKey("hello");
         boolean hello2 = map.containsValue("hello");
+        String key = "wWW";
+        int h = key.hashCode();
+        int hash = h ^ (h>>>16);
+
     }
 
 }
