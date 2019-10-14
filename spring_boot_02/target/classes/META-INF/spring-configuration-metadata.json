@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "com.bit.cn.po.Person",
+      "sourceType": "com.bit.cn.po.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.bit.cn.po.Person",
+      "defaultValue": 0
+    },
+    {
+      "name": "person.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.bit.cn.po.Person",
+      "defaultValue": false
+    },
+    {
+      "name": "person.dog",
+      "type": "com.bit.cn.po.Dog",
+      "sourceType": "com.bit.cn.po.Person"
+    },
+    {
+      "name": "person.list",
+      "type": "java.util.ArrayList<java.lang.String>",
+      "sourceType": "com.bit.cn.po.Person"
+    },
+    {
+      "name": "person.map",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "com.bit.cn.po.Person"
+    },
+    {
+      "name": "person.name",
+      "type": "java.lang.String",
+      "sourceType": "com.bit.cn.po.Person"
+    }
+  ],
+  "hints": []
+}
