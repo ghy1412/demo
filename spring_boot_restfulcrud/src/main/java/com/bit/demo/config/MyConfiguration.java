@@ -23,7 +23,7 @@ public class MyConfiguration extends WebMvcConfigurationSupport{
             }
         };
 
+
         return webMvcConfigurationSupport;
     }
-
 }
