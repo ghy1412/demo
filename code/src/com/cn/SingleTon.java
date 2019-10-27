@@ -5,7 +5,7 @@ public class SingleTon {
     private SingleTon(){} //构造方法私有
 
     public static SingleTon getInstance() {
-        if (singleTon == null) {
+    if (singleTon == null) {
             synchronized (SingleTon.class) {
                 if (singleTon == null) {
                     singleTon = new SingleTon();
