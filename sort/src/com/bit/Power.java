@@ -40,4 +40,34 @@ public class Power {
         }
         return result;
     }
+
+    //每次加一 这个是从n 打印到  "n位" 数字的最大值 比如输入3 输出 1, 2, 3,... 到 999
+    public static boolean increment(char[] chars) {
+        boolean isOverflow = true;
+        int overNumber = 0;
+        int length = chars.length;
+
+
+
+          for (int i = length-1; i >= 0; i--) {
+            //先拿到最后一位的数
+            int number = (chars[i] - '0') + overNumber;
+            if (i == length-1) {
+                number++;
+            }
+            if (number >= 10) {
+                if (i == 0) {
+                    isOverflow = false;
+                } else {
+                    number = number - 10;
+                    overNumber = 1;
+                    chars[i] = (char)(number + '0');
+                }
+            } else {
+                chars[i] = (char) (number + '0');
+                break;
+            }
+        }
+        return isOverflow;
+    }
 }

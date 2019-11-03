@@ -1,11 +1,22 @@
 package com.bit;
 
 
+import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        int fibonacci = Fibonacci.fibonacci(1231);
-        System.out.println(fibonacci);
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        char[] chars = new char[s.length()];
+        for (int i = 0; i < chars.length; i++) {
+            chars[i] = '0';
+        }
+         while (Power.increment(chars)) {
+            for (char aChar : chars) {
+                System.out.print(aChar);
+            }
+            System.out.println();
+        }
     }
 
     private static void printV(int[] array) {
